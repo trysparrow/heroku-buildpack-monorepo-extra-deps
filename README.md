@@ -14,6 +14,8 @@ Enter the Monorepo buildpack, which is a copy of [heroku-buildpack-multi-procfil
    `heroku buildpacks:add -a <app> https://github.com/lstoll/heroku-buildpack-monorepo`
 4. For each app, `git push git@heroku.com:<app> master`
 
+Optionally, set `APP_EXTRA_PATHS` to a space-separated list of other repo paths to keep. Each keeps its relative path under the app root, e.g. `entitlement-tracking` ends up at `/app/entitlement-tracking`.
+
 Note: If you already have other buildpacks defined, you'll need to make sure that the heroku-buildpack-monorepo buildpack is defined first. You can do this by adding `-i 1` to the `heroku buildpacks:add` command.
 
 # Authors
